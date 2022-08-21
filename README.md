@@ -3,7 +3,7 @@
 ## Usage
 
 - `docker-compose up -d`
-- `docker login`:
+- `docker login localhost:10102`:
   - user: `registry`
   - password: `ui`
 - `bash ./populate.sh`
