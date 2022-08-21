@@ -2,10 +2,12 @@
 
 ## Usage
 
+- `docker run --entrypoint htpasswd httpd:2 -Bbn myuser mypassword > registry-config/htpasswd`
 - `docker-compose up -d`
 - `docker login localhost:10102`:
-  - user: `registry`
-  - password: `ui`
+  - user: `myuser`
+  - password: `mypassword`
+- Open [localhost:8080](http://localhost:8080)
 - `bash ./populate.sh`
 
 # Acknowledgements
