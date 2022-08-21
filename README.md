@@ -14,7 +14,7 @@
 
 ### Nginx
 
-```
+```nginx
 server {
     listen 443 ssl http2;
     server_name hub.example.com;
