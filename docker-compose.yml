@@ -1,4 +1,4 @@
-version: '3.0'
+version: '3.9'
 
 services:
   registry:
@@ -9,6 +9,11 @@ services:
       - ./registry-config/htpasswd:/etc/docker/registry/htpasswd
     networks:
       - registry-ui-net
+    deploy:
+      resources:
+        limits:
+          cpus: "0.50"
+          memory: 512M
 
   ui:
     image: joxit/docker-registry-ui:latest
@@ -25,6 +30,11 @@ services:
       - registry
     networks:
       - registry-ui-net
+    deploy:
+      resources:
+        limits:
+          cpus: "0.50"
+          memory: 512M
 
 networks:
   registry-ui-net:
