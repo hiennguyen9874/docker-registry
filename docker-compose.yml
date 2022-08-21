@@ -2,7 +2,7 @@ version: '3.0'
 
 services:
   registry:
-    image: registry:2.7
+    image: registry:2.8
     volumes:
       - app-registry-data:/var/lib/registry
       - ./registry-config/credentials.yml:/etc/docker/registry/config.yml
