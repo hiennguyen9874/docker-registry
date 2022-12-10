@@ -30,8 +30,11 @@ server {
 
     charset utf-8;
 
-    proxy_send_timeout 36000s;
-    proxy_read_timeout 36000s;
+    proxy_send_timeout 120;
+    proxy_read_timeout 300;
+    proxy_buffering    off;
+    keepalive_timeout  5 5;
+    tcp_nodelay        on;
 
     # disable any limits to avoid HTTP 413 for large image uploads
     client_max_body_size 0;
